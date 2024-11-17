@@ -6,17 +6,119 @@
     <title>My Portfolio</title>
 </head>
 <body>
+    <nav>
+        <ul>
 
+        <li>
+            <a target="_self" href="#about">About Me</a>
+        </li>
+        <li>
+            <a target="_self" href="#skill">My skills</a>
+        </li>
+        <li>
+            <a href="#project">My project</a>
+        </li>
+        <li>
+        <a target="_self" href="#contact">contact</a>
+        </li>
+        </ul>
+    </nav>
+    <h1>Home</h1>
     <!--Section: intro-->
-    <header>
+    <header id="intro">
         <h1>Sumon Ahmed</h1>
-        <p>I am a student of Dhaka International University Department of Computer science and Engineering</p><hr>
+        <p><em>I am a student of Dhaka International University Department of Computer science and Engineering</em></p>
+        
+        <a href="https://www.facebook.com/?_rdc=1&_rdr"><img src="./images/20230226_184211.jpg" alt="sumon_ahmed" height="150"></a>
+        <hr>
     </header>
     
-    <!--Section: cotacts-->
+    <!--Section:abouts-->
+    <section id="about">
+        <h2>About Me</h2>
+        <p><strong>Experience:</strong>2 years experience in programming</p>
+        <p><strong>Education:</strong>I am still now B.Sc 3rd years students</p>
+    </section>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Level</th>
+                <th>Project</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <!--Section:skills-->
+    <section id="skill">
+        <h2>Skills</h2>
+    <ul>
+        <li>C</li>
+        <li>C++
+            <ul>
+                <li>DSA</li>
+            </ul>
+        </li>
+        <li>java</li>
+        <li>python</li>
+        
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
     
-    
-    
+    </section>
+    <!--Section:projects-->
+    <section id="project">
+        <h2>projects</h2>
+        <ol>
+            <li><a target="_blank" href="https://github.com/sumon-ahmed84/portfolio-html.git">portfolio website</a></li>
+            <li>snck game app</li>
+
+        </ol>
+    </section>
+    <!--Section:Contacts-->
+    <section id="contact">
+        <h2>Contact me</h2>
+        <form action="">
+            <div>
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="meassage">Meassage:</label>
+                <textarea name="meassage" id="meassage" cols="20" rows="10"></textarea>
+            </div>
+            <button type="submi">submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </section>
+    <footer>
+        <p>copyright reserved by Sumon2024</p>
+        <a href="tel:01642275060">Call me</a>
+        <a href="mailto:sumonahmed275060@gmail.com">Email me</a>
+
+    </footer>
     
 </body>
 </html>
