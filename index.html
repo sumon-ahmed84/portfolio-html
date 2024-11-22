@@ -3,35 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="portfolio, html">
+    <meta name="author" content="Sumon_ahmed">
+    <meta name="description" content="Sumon_ahmed is a frontend developer......">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: rgb(198, 189, 177);
+        font-family: "Roboto", sans-serif;
+
+    }
+</style>
 </head>
 <body>
-    <nav>
-        <ul>
-
-        <li>
-            <a target="_self" href="#about">About Me</a>
-        </li>
-        <li>
-            <a target="_self" href="#skill">My skills</a>
-        </li>
-        <li>
-            <a href="#project">My project</a>
-        </li>
-        <li>
-        <a target="_self" href="#contact">contact</a>
-        </li>
-        </ul>
-    </nav>
-    <h1>Home</h1>
-    <!--Section: intro-->
-    <header id="intro">
+    <header>
+        <nav>
+            <ul>
+    
+            <li>
+                <a target="_self" href="#about">About Me</a>
+            </li>
+            <li>
+                <a target="_self" href="#skill">My skills</a>
+            </li>
+            <li>
+                <a href="#project">My project</a>
+            </li>
+            <li>
+            <a target="_self" href="#contact">contact</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Section: intro-->
+    <section id="intro">
         <h1>Sumon Ahmed</h1>
         <p><em>I am a student of Dhaka International University Department of Computer science and Engineering</em></p>
         
         <a href="https://www.facebook.com/?_rdc=1&_rdr"><img src="./images/20230226_184211.jpg" alt="sumon_ahmed" height="150"></a>
         <hr>
-    </header>
+    </section>
     
     <!--Section:abouts-->
     <section id="about">
@@ -74,17 +91,52 @@
                 </tr>
                 <tr>
                     <td>c++</td>
-                    <td>Intermediate</td>
+                    <td rowspan="2">Intermediate</td>
                     <td>2</td>
                 </tr>
                 <tr>
                     <td>DSA</td>
-                    <td>Intermediate</td>
                     <td>3</td>
                 </tr>
             </tbody>
     
         </table>
+
+        <h3>Skill progress</h3>
+        <div>
+            <div>
+                <label for="htmlprogress">HTML:</label>
+                <progress id="htmlprogress" value="90" max="100">90%</progress>
+            </div>
+            <div>
+                <label for="cssprogress">CSS:</label>
+                <progress id="cssprogress" value="80" max="100">80%</progress>
+            </div>
+            <div>
+                <label for="JavaScriptprogress">JavaScript:</label>
+                <progress id="JavaScriptprogress" value="60" max="100">60%</progress>
+            </div>
+            <div>
+                <label for="cprogress">C:</label>
+                <progress id="cprogress" value="90" max="100">90%</progress>
+            </div>
+            <div>
+                <label for="c++progress">C++:</label>
+                <progress id="c++progress" value="80" max="100">80%</progress>
+            </div>
+            <div>
+                <label for="dsaprogress">DSA:</label>
+                <progress id="dsaprogress" value="80" max="100">80%</progress>
+            </div>
+        </div>
+
+        <div>
+            <h3>Experience Level</h3>
+            <label for="experience">Experience</label>
+            <meter id="experience" min="0" max="10" value="2"> 2years</meter>
+        </div>
+        
+        
     </section>
     <!--Section:projects-->
     <section id="project">
@@ -98,7 +150,8 @@
     <!--Section:Contacts-->
     <section id="contact">
         <h2>Contact me</h2>
-        <form action="">
+        <form action="https://formspree.io/f/mgvezbep"
+        method="POST">
             <div>
                 <label for="name">Name :</label>
                 <input type="text" id="name" name="name" required>
@@ -108,19 +161,56 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="10" required>
+            </div>
+
+            <div>
+                <label for="image">Upload image:</label>
+                <input type="file" name="image" id="image" accept="image">
+            </div>
+
+            <div>
+                <label for="subject">Subject:</label>
+                <select name="subject" id="subject">
+                    <option value="text">job opportunity</option>
+                    <option value="text">Interning</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
+            </div>
+            <div>
                 <label for="meassage">Meassage:</label>
                 <textarea name="meassage" id="meassage" cols="20" rows="10"></textarea>
             </div>
-            <button type="submi">submit</button>
+            <button type="submit">submit</button>
             <button type="reset">Clear</button>
         </form>
     </section>
-    <footer>
-        <p>copyright reserved by Sumon2024</p>
-        <a href="tel:01642275060">Call me</a>
-        <a href="mailto:sumonahmed275060@gmail.com">Email me</a>
+    </main>
+    <!--footer-->
+    <div>
+        <footer>
+            <p>copyright reserved by Sumon2024</p>
+            <a href="tel:01642275060">Call me</a>
+            <a href="mailto:sumonahmed275060@gmail.com">Email me</a>
+            <h3>Follow Me</h3>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/md.sumon.ahmed.683710?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i>My Facebook</a>
+                </li>
+            </ul>
+    
+        </footer>
+    </div>
 
-    </footer>
+    <div>
+        <h3>My location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232069.80054239646!2d89.88063859205566!3d24.65500846431686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37562698236e5fa1%3A0x7ed3c7c357fb40d6!2sMadhupur%20Upazila!5e0!3m2!1sen!2sbd!4v1732285393862!5m2!1sen!2sbd" title="home address" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     
 </body>
 </html>
